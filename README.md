@@ -26,6 +26,9 @@ Here it'll show a single post based on Post Id. it contains post `title` and `bo
 2. Run `npm insatll` to dowload all dependencies
 3. Run `npm start` , it'll automatically start your app
 
+## `Run Test cases`
+
+Run `npm run test` or `npm test`
 
 
 
