@@ -7,7 +7,7 @@ https://github.com/VinayChaurasiya96/Table_with_sortFilterAndPagination_/assets/
 This project has created individually by me, it has build using React.js. I have used `Material Design Bootstrap` for styling and responsive components, `Axios` for api calls. Also achieved Search, Sort in ascending and descending both, pagination functioanality. i 
 also used a `loader` from `MDB` .
 
-## `Home Page`
+## `Home Pag`
 ![Screenshot (4)](https://github.com/VinayChaurasiya96/Table_with_sortFilterAndPagination_/assets/80849410/38406a2c-3f16-41fc-b251-287a43e29093)
 
 This is Home Page where it is displaying all posts (5 posts per page). On typing in `search input` it will show the result based on search .
