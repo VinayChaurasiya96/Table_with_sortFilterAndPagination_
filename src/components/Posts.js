@@ -106,7 +106,7 @@ const Posts = () => {
       );
     } else if (currentPage > 0 && currentPage < 100 / pageLimit - 1) {
       return (
-        <MDBPagination className="mb-0">
+        <MDBPagination className="pagination-head">
           <MDBPaginationItem>
             <MDBBtn
               onClick={() =>
@@ -190,51 +190,49 @@ const Posts = () => {
                     <tr>
                       <th scope="col">
                         ID
-                        <button onClick={(e) => handleSort("ascending", "id")}>
+                       <span className="upDownArrow ">
+                       <button onClick={(e) => handleSort("ascending", "id")}>
                           <BsArrowUpShort />
                         </button>
                         <button onClick={(e) => handleSort("descending", "id")}>
                           <BsArrowDownShort />
                         </button>
+                       </span>
                       </th>
                       <th scope="col">
                         User ID
-                        <button
-                          onClick={() => handleSort("ascending", "userId")}
-                        >
+                        <span className="upDownArrow ">
+                       <button onClick={(e) => handleSort("ascending", "userId")}>
                           <BsArrowUpShort />
                         </button>
-                        <button
-                          onClick={() => handleSort("descending", "userId")}
-                        >
+                        <button onClick={(e) => handleSort("descending", "userId")}>
                           <BsArrowDownShort />
                         </button>
+                       </span>
                       </th>
                       <th scope="col" className="">
                         Title
-                        <button
-                          onClick={() => handleSort("ascending", "title")}
-                        >
+                        <span className="upDownArrow ">
+                       <button onClick={(e) => handleSort("ascending", "title")}>
                           <BsArrowUpShort />
                         </button>
-                        <button
-                          onClick={() => handleSort("descending", "title")}
-                        >
+                        <button onClick={(e) => handleSort("descending", "title")}>
                           <BsArrowDownShort />
                         </button>
+                       </span>
                       </th>
                       <th scope="col">
                         Body
-                        <button onClick={() => handleSort("ascending", "body")}>
+                        <span className="upDownArrow">
+                       <button onClick={(e) => handleSort("ascending", "body")}>
                           <BsArrowUpShort />
                         </button>
-                        <button
-                          onClick={() => handleSort("descending", "body")}
-                        >
+                        <button onClick={(e) => handleSort("descending", "body")}>
                           <BsArrowDownShort />
                         </button>
+                       </span>
                       </th>
-                      <th scope="col">Action</th>
+                      <th className="ActionBtn" scope="col">Action</th>
                     </tr>
                   </MDBTableHead>
                   {posts.length === 0 ? (
@@ -249,7 +247,7 @@ const Posts = () => {
                     posts.map((el, index) => (
                       <MDBTableBody className="align-center mb-0" key={el.id}>
                         <tr>
-                          <td className="text-center mb-0">{el.id}</td>
+                          <td className="text-center mb-0 mw-200">{el.id}</td>
                           <td className="text-center mb-0">{el.userId}</td>
                           <td className="text-center mb-0">{el.title}</td>
                           <td className="text-center mb-0">{el.body}</td>
@@ -265,7 +263,7 @@ const Posts = () => {
             </MDBRow>
             <div
               style={{
-                margin: "auto",
+                margin: "0 auto 100px auto",
                 padding: "15px",
                 maxWidth: "400px",
                 alignContent: "center",
